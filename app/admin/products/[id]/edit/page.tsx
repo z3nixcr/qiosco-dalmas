@@ -20,13 +20,17 @@ async function getProductById(id: number) {
   return product;
 }
 
+type EditProductPageProps = {
+  params: {
+    id: string;
+  };
+};
+
 export default async function EditProductPage({
   params,
-}: {
-  params: { id: string };
-}) {
-  const product = await getProductById(Number(params.id));
-  console.log({ product });
+}: EditProductPageProps) {
+  const product = await getProductById(+params.id);
+  // console.log({ product });
 
   return (
     <>
