@@ -8,10 +8,10 @@ type LatestOrdersProps = {
 export default function LatestOrders({
   order,
 }: LatestOrdersProps) {
-  console.log(
-    "LatestOrders component rendered with order:",
-    order
-  );
+  // console.log(
+  //   "LatestOrders component rendered with order:",
+  //   order
+  // );
 
   return (
     <div className="bg-white shadow-md rounded-lg p-6">

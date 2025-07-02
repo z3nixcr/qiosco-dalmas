@@ -35,9 +35,8 @@ export default async function ProductsPage({
 }: {
   searchParams: { page: string };
 }) {
-  const page = searchParams.page
-    ? parseInt(searchParams.page)
-    : 1;
+  const { page: currentPage } = await searchParams;
+  const page = currentPage ? parseInt(currentPage) : 1;
   const pageSize = 10;
 
   if (page < 0) redirect(`/admin/products`);

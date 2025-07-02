@@ -19,7 +19,8 @@ export default async function OrderPage({
 }: {
   params: { category: string };
 }) {
-  const products = await getProducts(params.category);
+  const { category } = await params;
+  const products = await getProducts(category);
   // console.log(products);
 
   return (

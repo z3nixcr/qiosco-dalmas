@@ -23,14 +23,15 @@ export default async function SearchPage({
 }: {
   searchParams: { query: string };
 }) {
-  const products = await searchProducts(searchParams.query);
+  const { query } = await searchParams;
+  const products = await searchProducts(query);
   //   console.log({ products });
 
   return (
     <>
       <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-4">
         <Heading>
-          Resultados de la búsqueda: {searchParams.query}
+          Resultados de la búsqueda: {query}
         </Heading>
         <ProductSearchForm />
       </div>

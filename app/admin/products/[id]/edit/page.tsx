@@ -29,7 +29,8 @@ type EditProductPageProps = {
 export default async function EditProductPage({
   params,
 }: EditProductPageProps) {
-  const product = await getProductById(+params.id);
+  const { id } = await params;
+  const product = await getProductById(+id);
   // console.log({ product });
 
   return (

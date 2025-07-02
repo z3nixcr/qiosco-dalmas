@@ -3,7 +3,7 @@ import ProductForm from "@/components/products/ProductForm";
 import Heading from "@/components/ui/Heading";
 
 export default function CreateProductPage() {
-  console.log("CreateProductPage");
+  // console.log("CreateProductPage");
 
   return (
     <>

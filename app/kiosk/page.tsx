@@ -18,7 +18,12 @@ export default function KioskOrdersPage() {
     revalidateOnFocus: false,
   });
 
-  if (isLoading) return <p>Cargando...</p>;
+  if (isLoading)
+    return (
+      <p className="h-screen w-screen grid place-content-center">
+        Cargando...
+      </p>
+    );
   return (
     <>
       <h1 className="text-center mt-20 text-6xl font-black">
@@ -31,7 +36,7 @@ export default function KioskOrdersPage() {
           No hay ordenes pendientes
         </p>
       ) : (
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 place-content-center max-w-5xl mx-auto mt-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-4 place-content-center max-w-5xl mx-auto my-10">
           {data?.map((order) => (
             <LatestOrders
               key={order.id}
